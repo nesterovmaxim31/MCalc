@@ -55,7 +55,9 @@ void Calc::on_twoButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -68,7 +70,9 @@ void Calc::on_threeButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -82,7 +86,9 @@ void Calc::on_fourButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -95,7 +101,9 @@ void Calc::on_fiveButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -109,7 +117,9 @@ void Calc::on_sevenButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -122,7 +132,9 @@ void Calc::on_eightButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -135,7 +147,9 @@ void Calc::on_sixButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -148,7 +162,9 @@ void Calc::on_nineButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -164,7 +180,9 @@ void Calc::on_dotButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -179,7 +197,9 @@ void Calc::on_AButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -193,7 +213,9 @@ void Calc::on_BButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -207,7 +229,9 @@ void Calc::on_CButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -221,7 +245,9 @@ void Calc::on_DButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -235,7 +261,9 @@ void Calc::on_EButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -249,7 +277,9 @@ void Calc::on_FButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -263,7 +293,9 @@ void Calc::on_GButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -277,7 +309,9 @@ void Calc::on_HButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -291,7 +325,9 @@ void Calc::on_IButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -305,7 +341,9 @@ void Calc::on_JButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -319,7 +357,9 @@ void Calc::on_KButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -333,7 +373,9 @@ void Calc::on_LButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -347,7 +389,9 @@ void Calc::on_MButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -361,7 +405,9 @@ void Calc::on_NButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -375,7 +421,9 @@ void Calc::on_OButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -389,7 +437,9 @@ void Calc::on_PButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -403,7 +453,9 @@ void Calc::on_QButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -417,7 +469,9 @@ void Calc::on_RButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -431,7 +485,9 @@ void Calc::on_SButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -445,7 +501,9 @@ void Calc::on_TButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -459,7 +517,9 @@ void Calc::on_UButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -473,7 +533,9 @@ void Calc::on_VButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -487,7 +549,9 @@ void Calc::on_WButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -501,7 +565,9 @@ void Calc::on_XButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -515,7 +581,9 @@ void Calc::on_YButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -529,7 +597,9 @@ void Calc::on_ZButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "You have chosen the wrong number system!");
+        QMessageBox msgBox;
+        msgBox.setText("You have chosen the wrong number system!");
+        msgBox.exec();
     }
 }
 
@@ -567,7 +637,6 @@ void Calc::on_factorialButton_clicked()
 void Calc::on_spinBox_valueChanged(int arg1)
 {
     on_equalsButton_clicked();
-    // printf("now we change number system from %d to %d\n", CurrentNumberSystemMode, arg1);
     firstNumber = Converter(firstNumber, CurrentNumberSystemMode, arg1);
     CurrentNumberSystemMode = arg1;
     ui -> lineEdit -> setText(GenerateString());
@@ -658,7 +727,9 @@ void Calc::on_plusminusButton_clicked()
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "For perform this operation choose decimal number system!");
+        QMessageBox msgBox;
+        msgBox.setText("For perform this operation choose decimal number system!");
+        msgBox.exec();
     }
 }
 
@@ -668,11 +739,12 @@ void Calc::on_equalsButton_clicked()
     {
         if (secondNumber == "0" && (CurrentOperand == 4 || CurrentOperand == 6))
         {
-            QMessageBox::about(this, "Warning!", "We can't divide by zero!");
+            QMessageBox msgBox;
+            msgBox.setText("We can't divide by zero!");
+            msgBox.exec();
         }
         else
         {
-            // printf("first number: %s and second: %s, current number system: %d\n", firstNumber.toStdString().c_str(), secondNumber.toStdString().c_str(), CurrentNumberSystemMode);
             CurrentNumber = 1;
             firstNumber = Equal(firstNumber, secondNumber, CurrentOperand, CurrentNumberSystemMode);
             CurrentOperand = 0;
@@ -696,17 +768,21 @@ void Calc::on_reciprocalButton_clicked()
     {
         if (firstNumber == "0")
         {
-            QMessageBox::about(this, "Warning!", "We can't divide by zero!");
+            QMessageBox msgBox;
+            msgBox.setText("We can't divide by zero!");
+            msgBox.exec();
         }
         else
         {
             firstNumber = QString::number(1 / firstNumber.toDouble());
-            ui ->lineEdit -> setText(GenerateString());
+            ui -> lineEdit -> setText(GenerateString());
         }
     }
     else
     {
-        QMessageBox::about(this, "Warning!", "For perform this operation choose decimal number system!");
+        QMessageBox msgBox;
+        msgBox.setText("For perform this operation choose decimal number system!");
+        msgBox.exec();
     }
     
 }
@@ -714,17 +790,10 @@ void Calc::on_reciprocalButton_clicked()
 // a ^ b
 void Calc::on_topowerButton_clicked()
 {
-    if (CurrentNumberSystemMode == 10)
-    {
-        on_equalsButton_clicked();
-        CurrentOperand = 5;
-        CurrentNumber = 2;
-        ui -> lineEdit -> setText(GenerateString());
-    }
-    else
-    {
-        QMessageBox::about(this, "Warning!", "For perform this operation choose decimal number system!");
-    }
+    on_equalsButton_clicked();
+    CurrentOperand = 5;
+    CurrentNumber = 2;
+    ui -> lineEdit -> setText(GenerateString());
 }
 
 // a mod b
@@ -738,11 +807,11 @@ void Calc::on_modButton_clicked()
 
 void Calc::keyPressEvent(QKeyEvent *event)
 {
-    if( event->key() == Qt::Key_Return )
+    if (event->key() == Qt::Key_Return)
     {
         ui -> equalsButton -> animateClick();
     }
-    if (event -> key() == Qt::Key_Backspace)
+    else if (event -> key() == Qt::Key_Backspace)
     {
         ui -> AC1Button -> animateClick();
     }

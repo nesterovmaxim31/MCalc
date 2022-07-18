@@ -78,7 +78,7 @@ QString GetStringWithoutLastSymbol(QString SomeString)
 
 void DeleteLastSymbol()
 {
-    printf("Current Operand: %d, Current Number: %d, firstNuber: %s, secondNumber: %s\n", CurrentOperand, CurrentNumber, firstNumber.toStdString().c_str(), secondNumber.toStdString().c_str());
+    // printf("Current Operand: %d, Current Number: %d, firstNuber: %s, secondNumber: %s\n", CurrentOperand, CurrentNumber, firstNumber.toStdString().c_str(), secondNumber.toStdString().c_str());
     if (CurrentOperand == 0 && firstNumber.length() == 1)
     {
         firstNumber = "0";
@@ -89,7 +89,6 @@ void DeleteLastSymbol()
     }
     else if (CurrentOperand != 0 && (secondNumber == "" || secondNumber == "0"))
     {
-        printf("now we will try to remove operand!\n");
         CurrentOperand = 0;
         CurrentNumber = 1;
     }
