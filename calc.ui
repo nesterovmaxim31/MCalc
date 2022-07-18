@@ -2022,6 +2022,23 @@ color: rgb(255, 255, 255);
         <height>16777215</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: rgb(97, 97, 97);
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover
+{
+background-color: rgb(244, 246, 255);
+}
+
+QPushButton:pressed
+{
+background-color:rgb(39, 255, 24);
+}</string>
+      </property>
       <property name="text">
        <string>Bin</string>
       </property>
@@ -2037,6 +2054,23 @@ color: rgb(255, 255, 255);
         <width>50</width>
         <height>16777215</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: rgb(97, 97, 97);
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover
+{
+background-color: rgb(244, 246, 255);
+}
+
+QPushButton:pressed
+{
+background-color:rgb(39, 255, 24);
+}</string>
       </property>
       <property name="text">
        <string>Oct</string>
@@ -2054,6 +2088,23 @@ color: rgb(255, 255, 255);
         <height>16777215</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: rgb(97, 97, 97);
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover
+{
+background-color: rgb(244, 246, 255);
+}
+
+QPushButton:pressed
+{
+background-color:rgb(39, 255, 24);
+}</string>
+      </property>
       <property name="text">
        <string>Dec</string>
       </property>
@@ -2069,6 +2120,23 @@ color: rgb(255, 255, 255);
         <width>50</width>
         <height>16777215</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: rgb(97, 97, 97);
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover
+{
+background-color: rgb(244, 246, 255);
+}
+
+QPushButton:pressed
+{
+background-color:rgb(39, 255, 24);
+}</string>
       </property>
       <property name="text">
        <string>Hex</string>

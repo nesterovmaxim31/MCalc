@@ -644,6 +644,7 @@ void Calc::on_spinBox_valueChanged(int arg1)
 
 void Calc::on_binaryButton_clicked()
 {
+    on_equalsButton_clicked();
     firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 2);
     CurrentNumberSystemMode = 2;
     ui -> lineEdit -> setText(GenerateString());
@@ -652,6 +653,7 @@ void Calc::on_binaryButton_clicked()
 
 void Calc::on_octalButto_clicked()
 {
+    on_equalsButton_clicked();
     firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 8);
     CurrentNumberSystemMode = 8;
     ui -> lineEdit -> setText(GenerateString());
@@ -660,6 +662,7 @@ void Calc::on_octalButto_clicked()
 
 void Calc::on_decimalButton_clicked()
 {
+    on_equalsButton_clicked();
     firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 10);
     CurrentNumberSystemMode = 10;
     ui -> lineEdit -> setText(GenerateString());
@@ -668,6 +671,7 @@ void Calc::on_decimalButton_clicked()
 
 void Calc::on_hexButton_clicked()
 {
+    on_equalsButton_clicked();
     firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 16);
     CurrentNumberSystemMode = 16;
     ui -> lineEdit -> setText(GenerateString());
@@ -749,7 +753,7 @@ void Calc::on_equalsButton_clicked()
             firstNumber = Equal(firstNumber, secondNumber, CurrentOperand, CurrentNumberSystemMode);
             CurrentOperand = 0;
             secondNumber = "";
-            ui->lineEdit->setText(GenerateString());
+            ui -> lineEdit->setText(GenerateString());
         }
     }
     else
@@ -757,6 +761,7 @@ void Calc::on_equalsButton_clicked()
         CurrentNumber = 1;
         CurrentOperand = 0;
         secondNumber = "";
+        ui -> lineEdit -> setText(GenerateString());
     }   
 }
 
