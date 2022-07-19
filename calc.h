@@ -9,6 +9,8 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QMessageBox>
+#include <QClipboard>
+#include <QGuiApplication>
 
 
 QT_BEGIN_NAMESPACE
@@ -123,6 +125,8 @@ private slots:
 
     void on_dotButton_clicked();
 
+    void on_copyresultButton_clicked();
+
     void on_reciprocalButton_clicked();
 
     void on_topowerButton_clicked();
@@ -134,8 +138,6 @@ private slots:
     void keyPressEvent(QKeyEvent *event) override;
 
     void on_decimalButton_clicked();
-
-    
 
     void on_binaryButton_clicked();
 

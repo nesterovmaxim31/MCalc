@@ -737,6 +737,13 @@ void Calc::on_plusminusButton_clicked()
     }
 }
 
+void Calc::on_copyresultButton_clicked()
+{
+    on_equalsButton_clicked();
+    QClipboard *clipboard = QGuiApplication::clipboard();
+    clipboard -> setText(firstNumber);
+} 
+
 void Calc::on_equalsButton_clicked()
 {
     if (firstNumber != "" && secondNumber != "")
@@ -958,3 +965,6 @@ void Calc::keyPressEvent(QKeyEvent *event)
             break;
     }
 }
+
+
+

@@ -84,7 +84,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>300</y>
+     <y>330</y>
      <width>171</width>
      <height>101</height>
     </rect>
@@ -694,7 +694,7 @@ background-color:rgb(39, 255, 24);
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>150</y>
+     <y>180</y>
      <width>171</width>
      <height>91</height>
     </rect>
@@ -729,7 +729,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>250</y>
+     <y>280</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -1752,9 +1752,9 @@ background-color:rgb(39, 255, 24);
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>410</y>
+     <y>430</y>
      <width>171</width>
-     <height>141</height>
+     <height>148</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_3">
@@ -1937,8 +1937,8 @@ background-color:rgb(39, 255, 24);
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>560</y>
+     <x>480</x>
+     <y>570</y>
      <width>161</width>
      <height>25</height>
     </rect>
@@ -2147,6 +2147,30 @@ background-color:rgb(39, 255, 24);
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="copyresultButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>151</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+background-color: rgb(244, 246, 255);
+}
+
+QPushButton:pressed
+{
+background-color:rgb(39, 255, 24);
+}</string>
+   </property>
+   <property name="text">
+    <string>Copy Result</string>
+   </property>
   </widget>
  </widget>
  <resources/>
