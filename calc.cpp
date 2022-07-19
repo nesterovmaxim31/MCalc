@@ -27,6 +27,15 @@ void Calc::on_ACButton_clicked()
     ui -> spinBox -> setValue(10);
 }
 
+void Calc::on_CButton_2_clicked()
+{
+    CurrentNumber = 1;
+    CurrentOperand = 0;
+    secondNumber = "";
+    setValueofCurrentNumber("");
+    ui -> lineEdit -> setText(GenerateString());
+}
+
 void Calc::on_AC1Button_clicked()
 {
     DeleteLastSymbol();
@@ -817,10 +826,18 @@ void Calc::on_modButton_clicked()
     ui -> lineEdit -> setText(GenerateString());
 }
 
+void Calc::on_aboutButton_clicked()
+{
+    QMessageBox msgBox;
+    msgBox.setText("MCalc is currently covered under the MIT license and based on Qt\nMy contacts:\nemail: maxgoonfuture@gmail.com\nhttps://github.com/nesterovmaxim31/MCalc");
+    msgBox.exec();
+}
+
 void Calc::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Return)
     {
+     
         ui -> equalsButton -> animateClick();
     }
     else if (event -> key() == Qt::Key_Backspace)
@@ -965,6 +982,4 @@ void Calc::keyPressEvent(QKeyEvent *event)
             break;
     }
 }
-
-
 

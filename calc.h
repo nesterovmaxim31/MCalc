@@ -33,6 +33,8 @@ private slots:
 
     void on_ACButton_clicked();
 
+    void on_CButton_2_clicked();
+
     void on_twoButton_clicked();
 
     void on_threeButton_clicked();
@@ -132,6 +134,8 @@ private slots:
     void on_topowerButton_clicked();
 
     void on_modButton_clicked();
+
+    void on_aboutButton_clicked();
 
     void on_spinBox_valueChanged(int arg1);
     
