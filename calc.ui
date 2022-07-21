@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>635</width>
+    <width>630</width>
     <height>607</height>
    </size>
   </property>
@@ -83,9 +83,9 @@ color: rgb(255, 255, 255);
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>280</y>
-     <width>281</width>
+     <width>261</width>
      <height>321</height>
     </rect>
    </property>
@@ -94,8 +94,8 @@ color: rgb(255, 255, 255);
      <widget class="QPushButton" name="threeButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -106,7 +106,6 @@ color: rgb(255, 255, 255);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -133,8 +132,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="nineButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -145,7 +144,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -172,8 +170,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="eightButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -184,7 +182,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -211,8 +208,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="fiveButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -223,7 +220,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -250,8 +246,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="twoButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -262,7 +258,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -289,8 +284,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="sevenButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -301,7 +296,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -328,8 +322,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="sixButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -340,7 +334,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -367,8 +360,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="fourButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -379,7 +372,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -409,8 +401,8 @@ background-color:rgb(39, 255, 24);
       </property>
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -421,7 +413,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -448,8 +439,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="zeroButton">
       <property name="maximumSize">
        <size>
-        <width>160</width>
-        <height>70</height>
+        <width>180</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -460,7 +451,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -487,8 +477,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="dotButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>80</width>
+        <height>80</height>
        </size>
       </property>
       <property name="font">
@@ -499,7 +489,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(97, 97, 97);
 color: rgb(255, 255, 255);
 }
@@ -527,9 +516,9 @@ background-color:rgb(39, 255, 24);
   <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>-10</x>
+     <x>10</x>
      <y>150</y>
-     <width>661</width>
+     <width>621</width>
      <height>80</height>
     </rect>
    </property>
@@ -541,8 +530,8 @@ background-color:rgb(39, 255, 24);
       </property>
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>75</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -553,8 +542,7 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
-background-color: rgb(255, 149, 19);
+background-color: rgb(192, 109, 14);
 color: rgb(255, 255, 255);
 }
 
@@ -580,8 +568,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="minusButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>75</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -592,8 +580,7 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
-background-color: rgb(255, 149, 19);
+background-color: rgb(192, 109, 14);
 color: rgb(255, 255, 255);
 }
 
@@ -619,8 +606,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="multiplyButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>75</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -631,8 +618,7 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
-background-color: rgb(255, 149, 19);
+background-color: rgb(192, 109, 14);
 color: rgb(255, 255, 255);
 }
 
@@ -658,8 +644,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="divideButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>75</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -670,8 +656,7 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
-background-color: rgb(255, 149, 19);
+background-color: rgb(192, 109, 14);
 color: rgb(255, 255, 255);
 }
 
@@ -697,8 +682,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="plusminusButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>75</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -709,8 +694,7 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
-background-color: rgb(255, 149, 19);
+background-color: rgb(192, 109, 14);
 color: rgb(255, 255, 255);
 }
 
@@ -736,8 +720,8 @@ background-color:rgb(39, 255, 24);
      <widget class="QPushButton" name="equalsButton">
       <property name="maximumSize">
        <size>
-        <width>70</width>
-        <height>70</height>
+        <width>167</width>
+        <height>75</height>
        </size>
       </property>
       <property name="font">
@@ -748,7 +732,6 @@ background-color:rgb(39, 255, 24);
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-border-radius: 35px;
 background-color: rgb(18, 91, 5);
 color: rgb(255, 255, 255);
 }
@@ -782,9 +765,9 @@ background-color:rgb(39, 255, 24);
   <widget class="QWidget" name="gridLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>280</x>
      <y>290</y>
-     <width>161</width>
+     <width>171</width>
      <height>311</height>
     </rect>
    </property>
@@ -2101,8 +2084,8 @@ background-color:rgb(39, 255, 24);
    </property>
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>243</y>
+     <x>10</x>
+     <y>240</y>
      <width>201</width>
      <height>25</height>
     </rect>
@@ -2122,8 +2105,8 @@ background-color:rgb(39, 255, 24);
   <widget class="QSpinBox" name="spinBox">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>236</y>
+     <x>200</x>
+     <y>230</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -2155,9 +2138,9 @@ color: rgb(255, 255, 255);
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>289</x>
+     <x>279</x>
      <y>230</y>
-     <width>161</width>
+     <width>171</width>
      <height>61</height>
     </rect>
    </property>

@@ -757,7 +757,7 @@ void Calc::on_equalsButton_clicked()
 {
     if (firstNumber != "" && secondNumber != "")
     {
-        if (secondNumber == "0" && (CurrentOperand == 4 || CurrentOperand == 6))
+        if ((secondNumber.count('0') + IfNumberIsDouble(secondNumber)) == secondNumber.length() && (CurrentOperand == 4 || CurrentOperand == 6))
         {
             QMessageBox msgBox;
             msgBox.setText("We can't divide by zero!");

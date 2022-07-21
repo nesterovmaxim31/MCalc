@@ -105,6 +105,7 @@ QString RemoveLastZeros(QString s1)
 // if number to long
 QString Proverka(double Answer1)
 {
+   printf("%f\n", Answer1);
    std::string Answer = std::to_string(Answer1), helper;
    for (int i = 0; i < Answer.length(); i++)
    {
@@ -165,12 +166,11 @@ QString ChangeSignofCurrentNumber(int CurrentNumber, QString firstNumber, QStrin
    QString Answer;
    if (CurrentNumber == 1)
    {
-      // printf("changed sign: %d\n", firstNumber.toDouble() * -1);
-      Answer = QString::number(firstNumber.toDouble() * -1);
+      Answer = Proverka(firstNumber.toDouble() * -1);
    }
    else if (CurrentNumber == 2)
    {
-      Answer = QString::number(secondNumber.toDouble() * -1);
+      Answer = Proverka(secondNumber.toDouble() * -1);
    }
    return Answer;
 }
