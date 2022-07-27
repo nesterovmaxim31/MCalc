@@ -21,6 +21,10 @@ set(PROJECT_SOURCES
         calc.ui
 )
 
+
+
+
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(MCalc
         MANUAL_FINALIZATION
