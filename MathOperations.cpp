@@ -67,6 +67,11 @@ QString DecimalToOther(long long number, int tosystemode)
 
 QString Converter(QString number, int fromsystemode, int tosystemode)
 {
+   if (IfNumberIsDouble(number))
+   {
+      long long number_ = number.toDouble();
+      number = QString::number(number_);      
+   }
    return DecimalToOther(OtherToDecimal(number, fromsystemode), tosystemode);
 }
 
