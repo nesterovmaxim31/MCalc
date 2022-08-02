@@ -9,6 +9,10 @@
 ### Installation guide for arch linux:
 #### https://aur.archlinux.org/packages/mcalc
 ----------------------------------------------------------------------------------------------------
+### Installation guide for windows:
+1) dowload this: https://github.com/nesterovmaxim31/MCalc_windows
+2) run mcalcsetup.exe
+----------------------------------------------------------------------------------------------------
 KCalc is currently covered under the MIT license. A copy of this
 license can be found in a file named LICENSE, in the toplevel directory.
 ### My contacts:
