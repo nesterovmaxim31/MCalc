@@ -1,7 +1,6 @@
 #include "calc.h"
 #include "./ui_calc.h"
-#include "MathOperations.cpp"
-#include "CurrentValue.cpp"
+
 
 
 Calc::Calc(QWidget *parent)
@@ -9,6 +8,7 @@ Calc::Calc(QWidget *parent)
     , ui(new Ui::Calc)
 {
     ui->setupUi(this);
+    Value x;
 }
 
 Calc::~Calc()
@@ -16,51 +16,51 @@ Calc::~Calc()
     delete ui;
 }
 
-void Calc::on_ACButton_clicked()
+ void Calc::on_ACButton_clicked()
 {
-    CurrentNumber = 1;
-    CurrentOperand = 0;
-    CurrentNumberSystemMode = 10;
-    secondNumber = "";
-    setValueofCurrentNumber("");
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentNumber = 1;
+    x.CurrentOperand = 0;
+    x.CurrentNumberSystemMode = 10;
+    x.secondNumber = "";
+    x.setValueofCurrentNumber("");
+    ui -> lineEdit -> setText(x.GenerateString());
     ui -> spinBox -> setValue(10);
-}
+} 
 
 void Calc::on_CButton_2_clicked()
 {
-    CurrentNumber = 1;
-    CurrentOperand = 0;
-    secondNumber = "";
-    setValueofCurrentNumber("");
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentNumber = 1;
+    x.CurrentOperand = 0;
+    x.secondNumber = "";
+    x.setValueofCurrentNumber("");
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 void Calc::on_AC1Button_clicked()
 {
-    DeleteLastSymbol();
-    ui->lineEdit->setText(GenerateString());
+    x.DeleteLastSymbol();
+    ui->lineEdit->setText(x.GenerateString());
 }
 
 // NUMBERS
 void Calc::on_zeroButton_clicked()
 {
-    setValueofCurrentNumber("0");
-    ui->lineEdit->setText(GenerateString());
+    x.setValueofCurrentNumber("0");
+    ui->lineEdit->setText(x.GenerateString());
 }
 
 void Calc::on_oneButton_clicked()
 {
-    setValueofCurrentNumber("1");
-    ui->lineEdit->setText(GenerateString());
+    x.setValueofCurrentNumber("1");
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 void Calc::on_twoButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 3)
+    if (x.CurrentNumberSystemMode >= 3)
     {
-        setValueofCurrentNumber("2");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("2");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -68,14 +68,14 @@ void Calc::on_twoButton_clicked()
         msgBox.setText("You have chosen the wrong number system!");
         msgBox.exec();
     }
-}
+} 
 
 void Calc::on_threeButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 4)
+    if (x.CurrentNumberSystemMode >= 4)
     {
-        setValueofCurrentNumber("3");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("3");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -88,10 +88,10 @@ void Calc::on_threeButton_clicked()
 
 void Calc::on_fourButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 5)
+    if (x.CurrentNumberSystemMode >= 5)
     {
-        setValueofCurrentNumber("4");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("4");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -103,10 +103,10 @@ void Calc::on_fourButton_clicked()
 
 void Calc::on_fiveButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 6)
+    if (x.CurrentNumberSystemMode >= 6)
     {
-        setValueofCurrentNumber("5");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("5");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -119,10 +119,10 @@ void Calc::on_fiveButton_clicked()
 
 void Calc::on_sevenButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 8)
+    if (x.CurrentNumberSystemMode >= 8)
     {
-        setValueofCurrentNumber("7");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("7");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -134,10 +134,10 @@ void Calc::on_sevenButton_clicked()
 
 void Calc::on_eightButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 9)
+    if (x.CurrentNumberSystemMode >= 9)
     {
-        setValueofCurrentNumber("8");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("8");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -149,10 +149,10 @@ void Calc::on_eightButton_clicked()
 
 void Calc::on_sixButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 7)
+    if (x.CurrentNumberSystemMode >= 7)
     {
-        setValueofCurrentNumber("6");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("6");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -164,10 +164,10 @@ void Calc::on_sixButton_clicked()
 
 void Calc::on_nineButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 10)
+    if (x.CurrentNumberSystemMode >= 10)
     {
-        setValueofCurrentNumber("9");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("9");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -179,13 +179,13 @@ void Calc::on_nineButton_clicked()
 
 void Calc::on_dotButton_clicked()
 {
-    if (CurrentNumberSystemMode == 10)
+    if (x.CurrentNumberSystemMode == 10)
     {
-        if ((CurrentNumber == 1 && IfNumberIsDouble(firstNumber) != true) || (CurrentNumber == 2 && IfNumberIsDouble(secondNumber) != true))
+        if ((x.CurrentNumber == 1 && IfNumberIsDouble(x.firstNumber) != true) || (x.CurrentNumber == 2 && IfNumberIsDouble(x.secondNumber) != true))
         {
-        setValueofCurrentNumber(".");
+        x.setValueofCurrentNumber(".");
         }
-        ui->lineEdit->setText(GenerateString());
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -199,10 +199,10 @@ void Calc::on_dotButton_clicked()
 // A
 void Calc::on_AButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 11)
+    if (x.CurrentNumberSystemMode >= 11)
     {
-        setValueofCurrentNumber("A");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("A");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -215,10 +215,10 @@ void Calc::on_AButton_clicked()
 // B
 void Calc::on_BButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 12)
+    if (x.CurrentNumberSystemMode >= 12)
     {
-        setValueofCurrentNumber("B");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("B");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -231,10 +231,10 @@ void Calc::on_BButton_clicked()
 // C
 void Calc::on_CButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 13)
+    if (x.CurrentNumberSystemMode >= 13)
     {
-        setValueofCurrentNumber("C");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("C");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -247,10 +247,10 @@ void Calc::on_CButton_clicked()
 // D
 void Calc::on_DButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 14)
+    if (x.CurrentNumberSystemMode >= 14)
     {
-        setValueofCurrentNumber("D");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("D");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -263,10 +263,10 @@ void Calc::on_DButton_clicked()
 // E
 void Calc::on_EButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 15)
+    if (x.CurrentNumberSystemMode >= 15)
     {
-        setValueofCurrentNumber("E");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("E");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -279,10 +279,10 @@ void Calc::on_EButton_clicked()
 // F
 void Calc::on_FButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 16)
+    if (x.CurrentNumberSystemMode >= 16)
     {
-        setValueofCurrentNumber("F");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("F");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -295,10 +295,10 @@ void Calc::on_FButton_clicked()
 // G
 void Calc::on_GButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 17)
+    if (x.CurrentNumberSystemMode >= 17)
     {
-        setValueofCurrentNumber("G");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("G");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -311,10 +311,10 @@ void Calc::on_GButton_clicked()
 // H
 void Calc::on_HButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 18)
+    if (x.CurrentNumberSystemMode >= 18)
     {
-        setValueofCurrentNumber("H");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("H");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -327,10 +327,10 @@ void Calc::on_HButton_clicked()
 // I
 void Calc::on_IButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 19)
+    if (x.CurrentNumberSystemMode >= 19)
     {
-        setValueofCurrentNumber("I");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("I");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -343,10 +343,10 @@ void Calc::on_IButton_clicked()
 // J
 void Calc::on_JButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 20)
+    if (x.CurrentNumberSystemMode >= 20)
     {
-        setValueofCurrentNumber("J");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("J");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -359,10 +359,10 @@ void Calc::on_JButton_clicked()
 // K
 void Calc::on_KButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 21)
+    if (x.CurrentNumberSystemMode >= 21)
     {
-        setValueofCurrentNumber("K");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("K");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -375,10 +375,10 @@ void Calc::on_KButton_clicked()
 // L
 void Calc::on_LButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 22)
+    if (x.CurrentNumberSystemMode >= 22)
     {
-        setValueofCurrentNumber("L");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("L");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -391,10 +391,10 @@ void Calc::on_LButton_clicked()
 // M
 void Calc::on_MButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 23)
+    if (x.CurrentNumberSystemMode >= 23)
     {
-        setValueofCurrentNumber("M");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("M");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -407,10 +407,10 @@ void Calc::on_MButton_clicked()
 // N
 void Calc::on_NButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 24)
+    if (x.CurrentNumberSystemMode >= 24)
     {
-        setValueofCurrentNumber("N");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("N");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -423,10 +423,10 @@ void Calc::on_NButton_clicked()
 // O
 void Calc::on_OButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 25)
+    if (x.CurrentNumberSystemMode >= 25)
     {
-        setValueofCurrentNumber("O");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("O");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -439,10 +439,10 @@ void Calc::on_OButton_clicked()
 // P
 void Calc::on_PButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 26)
+    if (x.CurrentNumberSystemMode >= 26)
     {
-        setValueofCurrentNumber("P");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("P");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -455,10 +455,10 @@ void Calc::on_PButton_clicked()
 // Q
 void Calc::on_QButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 27)
+    if (x.CurrentNumberSystemMode >= 27)
     {
-        setValueofCurrentNumber("Q");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("Q");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -471,10 +471,10 @@ void Calc::on_QButton_clicked()
 // R
 void Calc::on_RButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 28)
+    if (x.CurrentNumberSystemMode >= 28)
     {
-        setValueofCurrentNumber("R");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("R");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -487,10 +487,10 @@ void Calc::on_RButton_clicked()
 // S
 void Calc::on_SButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 29)
+    if (x.CurrentNumberSystemMode >= 29)
     {
-        setValueofCurrentNumber("S");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("S");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -503,10 +503,10 @@ void Calc::on_SButton_clicked()
 // T
 void Calc::on_TButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 30)
+    if (x.CurrentNumberSystemMode >= 30)
     {
-        setValueofCurrentNumber("T");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("T");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -519,10 +519,10 @@ void Calc::on_TButton_clicked()
 // U
 void Calc::on_UButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 31)
+    if (x.CurrentNumberSystemMode >= 31)
     {
-        setValueofCurrentNumber("U");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("U");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -535,10 +535,10 @@ void Calc::on_UButton_clicked()
 // V
 void Calc::on_VButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 32)
+    if (x.CurrentNumberSystemMode >= 32)
     {
-        setValueofCurrentNumber("V");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("V");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -551,10 +551,10 @@ void Calc::on_VButton_clicked()
 // W
 void Calc::on_WButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 33)
+    if (x.CurrentNumberSystemMode >= 33)
     {
-        setValueofCurrentNumber("W");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("W");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -567,10 +567,10 @@ void Calc::on_WButton_clicked()
 // X
 void Calc::on_XButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 34)
+    if (x.CurrentNumberSystemMode >= 34)
     {
-        setValueofCurrentNumber("X");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("X");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -583,10 +583,10 @@ void Calc::on_XButton_clicked()
 // Y
 void Calc::on_YButton_clicked()
 {
-    if (CurrentNumberSystemMode >= 35)
+    if (x.CurrentNumberSystemMode >= 35)
     {
-        setValueofCurrentNumber("Y");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("Y");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -599,10 +599,10 @@ void Calc::on_YButton_clicked()
 // Z
 void Calc::on_ZButton_clicked()
 {
-    if (CurrentNumberSystemMode == 36)
+    if (x.CurrentNumberSystemMode == 36)
     {
-        setValueofCurrentNumber("Z");
-        ui->lineEdit->setText(GenerateString());
+        x.setValueofCurrentNumber("Z");
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -617,126 +617,124 @@ void Calc::on_ZButton_clicked()
 void Calc::on_squareButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 5;
-    secondNumber = "2";
+    x.CurrentOperand = 5;
+    x.secondNumber = "2";
     on_equalsButton_clicked();
-    ui->lineEdit->setText(GenerateString());
+    ui->lineEdit->setText(x.GenerateString());
 }
 
 // root
 void Calc::on_rootButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 8;
-    secondNumber = "1";
+    x.CurrentOperand = 8;
+    x.secondNumber = "1";
     on_equalsButton_clicked();
-    ui->lineEdit->setText(GenerateString());
+    ui->lineEdit->setText(x.GenerateString());
 }
 
 // factorial
 void Calc::on_factorialButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 7;
-    secondNumber = "0";
+    x.CurrentOperand = 7;
+    x.secondNumber = "0";
     on_equalsButton_clicked();
-    ui->lineEdit->setText(GenerateString());
+    ui->lineEdit->setText(x.GenerateString());
 }
 
 void Calc::on_spinBox_valueChanged(int arg1)
 {
     on_equalsButton_clicked();
-    firstNumber = Converter(firstNumber, CurrentNumberSystemMode, arg1);
-    CurrentNumberSystemMode = arg1;
-    ui -> lineEdit -> setText(GenerateString());
+    x.firstNumber = Converter(x.firstNumber, x.CurrentNumberSystemMode, arg1);
+    x.CurrentNumberSystemMode = arg1;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 void Calc::on_binaryButton_clicked()
 {
     on_equalsButton_clicked();
-    firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 2);
-    CurrentNumberSystemMode = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.firstNumber = Converter(x.firstNumber, x.CurrentNumberSystemMode, 2);
+    x.CurrentNumberSystemMode = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
     ui -> spinBox -> setValue(2);
 }
 
 void Calc::on_octalButto_clicked()
 {
     on_equalsButton_clicked();
-    firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 8);
-    CurrentNumberSystemMode = 8;
-    ui -> lineEdit -> setText(GenerateString());
+    x.firstNumber = Converter(x.firstNumber, x.CurrentNumberSystemMode, 8);
+    x.CurrentNumberSystemMode = 8;
+    ui -> lineEdit -> setText(x.GenerateString());
     ui -> spinBox -> setValue(8);
 }
 
 void Calc::on_decimalButton_clicked()
 {
     on_equalsButton_clicked();
-    firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 10);
-    CurrentNumberSystemMode = 10;
-    ui -> lineEdit -> setText(GenerateString());
+    x.firstNumber = Converter(x.firstNumber, x.CurrentNumberSystemMode, 10);
+    x.CurrentNumberSystemMode = 10;
+    ui -> lineEdit -> setText(x.GenerateString());
     ui -> spinBox -> setValue(10);
 }
 
 void Calc::on_hexButton_clicked()
 {
     on_equalsButton_clicked();
-    firstNumber = Converter(firstNumber, CurrentNumberSystemMode, 16);
-    CurrentNumberSystemMode = 16;
-    ui -> lineEdit -> setText(GenerateString());
+    x.firstNumber = Converter(x.firstNumber, x.CurrentNumberSystemMode, 16);
+    x.CurrentNumberSystemMode = 16;
+    ui -> lineEdit -> setText(x.GenerateString());
     ui -> spinBox -> setValue(16);
 }
 
 // plus
 void Calc::on_plusButton_clicked()
 {
-    
     on_equalsButton_clicked();
-    CurrentOperand = 1;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 1;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 // minus
 void Calc::on_minusButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 2;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 2;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 // multiply
 void Calc::on_multiplyButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 3;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 3;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 // divide
 void Calc::on_divideButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 4;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 4;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
-
 void Calc::on_plusminusButton_clicked()
 {
-    if (CurrentNumberSystemMode == 10)
+    if (x.CurrentNumberSystemMode == 10)
     {
-        if (CurrentNumber == 1)
+        if (x.CurrentNumber == 1)
         {
-            firstNumber = ChangeSignofCurrentNumber(CurrentNumber, firstNumber, secondNumber);
+            x.firstNumber = ChangeSignofCurrentNumber(x.CurrentNumber, x.firstNumber, x.secondNumber);
         }
         else
         {
-            secondNumber = ChangeSignofCurrentNumber(CurrentNumber, firstNumber, secondNumber);
+            x.secondNumber = ChangeSignofCurrentNumber(x.CurrentNumber, x.firstNumber, x.secondNumber);
         }
-        ui->lineEdit->setText(GenerateString());
+        ui->lineEdit->setText(x.GenerateString());
     }
     else
     {
@@ -750,14 +748,14 @@ void Calc::on_copyresultButton_clicked()
 {
     on_equalsButton_clicked();
     QClipboard *clipboard = QGuiApplication::clipboard();
-    clipboard -> setText(firstNumber);
+    clipboard -> setText(x.firstNumber);
 } 
 
 void Calc::on_equalsButton_clicked()
 {
-    if (firstNumber != "" && secondNumber != "")
+    if (x.firstNumber != "" && x.secondNumber != "")
     {
-        if ((secondNumber.count('0') + IfNumberIsDouble(secondNumber)) == secondNumber.length() && (CurrentOperand == 4 || CurrentOperand == 6))
+        if ((x.secondNumber.count('0') + IfNumberIsDouble(x.secondNumber)) == x.secondNumber.length() && (x.CurrentOperand == 4 || x.CurrentOperand == 6))
         {
             QMessageBox msgBox;
             msgBox.setText("We can't divide by zero!");
@@ -765,19 +763,19 @@ void Calc::on_equalsButton_clicked()
         }
         else
         {
-            CurrentNumber = 1;
-            firstNumber = Equal(firstNumber, secondNumber, CurrentOperand, CurrentNumberSystemMode);
-            CurrentOperand = 0;
-            secondNumber = "";
-            ui -> lineEdit->setText(GenerateString());
+            x.CurrentNumber = 1;
+            x.firstNumber = Equal(x.firstNumber, x.secondNumber, x.CurrentOperand, x.CurrentNumberSystemMode);
+            x.CurrentOperand = 0;
+            x.secondNumber = "";
+            ui -> lineEdit->setText(x.GenerateString());
         }
     }
     else
     {
-        CurrentNumber = 1;
-        CurrentOperand = 0;
-        secondNumber = "";
-        ui -> lineEdit -> setText(GenerateString());
+        x.CurrentNumber = 1;
+        x.CurrentOperand = 0;
+        x.secondNumber = "";
+        ui -> lineEdit -> setText(x.GenerateString());
     }   
 }
 
@@ -785,9 +783,9 @@ void Calc::on_equalsButton_clicked()
 void Calc::on_reciprocalButton_clicked()
 {
     on_equalsButton_clicked();
-    if (CurrentNumberSystemMode == 10)
+    if (x.CurrentNumberSystemMode == 10)
     {
-        if (firstNumber == "0")
+        if (x.firstNumber == "0")
         {
             QMessageBox msgBox;
             msgBox.setText("We can't divide by zero!");
@@ -795,8 +793,8 @@ void Calc::on_reciprocalButton_clicked()
         }
         else
         {
-            firstNumber = QString::number(1 / firstNumber.toDouble());
-            ui -> lineEdit -> setText(GenerateString());
+            x.firstNumber = QString::number(1 / x.firstNumber.toDouble());
+            ui -> lineEdit -> setText(x.GenerateString());
         }
     }
     else
@@ -812,18 +810,18 @@ void Calc::on_reciprocalButton_clicked()
 void Calc::on_topowerButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 5;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 5;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 // a mod b
 void Calc::on_modButton_clicked()
 {
     on_equalsButton_clicked();
-    CurrentOperand = 6;
-    CurrentNumber = 2;
-    ui -> lineEdit -> setText(GenerateString());
+    x.CurrentOperand = 6;
+    x.CurrentNumber = 2;
+    ui -> lineEdit -> setText(x.GenerateString());
 }
 
 void Calc::on_aboutButton_clicked()

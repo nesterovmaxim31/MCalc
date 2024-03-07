@@ -1,7 +1,4 @@
-#include <cmath>
-#include <cstdio>
-#include <iostream>
-
+#include "MathOperations.h"
 
 bool IfNumberIsDouble(QString Number)
 {
@@ -19,7 +16,8 @@ bool IfNumberIsDouble(QString Number)
 long long OtherToDecimal(QString number, int fromsystemode)
 {
    long long decimalNumber = 0;
-   char Digits[36] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};  
+   char Digits[36] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
+    'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};  
    int power = 0;  
    for(int i = number.length() - 1; i >= 0; i--) 
    {
@@ -32,7 +30,6 @@ long long OtherToDecimal(QString number, int fromsystemode)
       }
       power++;
    }
-   // printf("number %s from this systemode %d to 10 equal %d\n", number.toStdString().c_str(), fromsystemode, decimalNumber);
    return decimalNumber;  
 }
 
@@ -60,7 +57,6 @@ QString DecimalToOther(long long number, int tosystemode)
    {
       Answer += helper[j];
    }
-   // printf("number %d from 10 to this systemode: %d equal: %s\n", number_1, tosystemode, Answer.toStdString().c_str());
    return Answer;
 }
 
@@ -72,15 +68,15 @@ QString Converter(QString number, int fromsystemode, int tosystemode)
       long long number_ = number.toDouble();
       number = QString::number(number_);      
    }
-   return DecimalToOther(OtherToDecimal(number, fromsystemode), tosystemode);
+   QString Answer = DecimalToOther(OtherToDecimal(number, fromsystemode), tosystemode);
+   return Answer;
 }
 
 long long Factorial(long long number)
 {
    
    long long a = 1;
-   for (int i = 1; i <= number; i++)
-   {
+   for (int i = 1; i <= number; i++) {
       a = a * i;
    }
    return a;
@@ -110,7 +106,6 @@ QString RemoveLastZeros(QString s1)
 // if number to long
 QString Proverka(double Answer1)
 {
-   printf("%f\n", Answer1);
    std::string Answer = std::to_string(Answer1), helper;
    for (int i = 0; i < Answer.length(); i++)
    {

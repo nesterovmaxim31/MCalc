@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(mcalc VERSION 2.3.0 LANGUAGES CXX)
+project(mcalc VERSION 3.0.0 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -19,6 +19,10 @@ set(PROJECT_SOURCES
         calc.cpp
         calc.h
         calc.ui
+        CurrentValue.cpp
+        CurrentValue.h
+        MathOperations.cpp
+        MathOperations.h
 )
 
 

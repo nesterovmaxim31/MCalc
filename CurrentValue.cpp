@@ -1,11 +1,7 @@
-int CurrentNumberSystemMode = 10;
-int CurrentOperand = 0;
-int CurrentNumber = 1;
-QString firstNumber;
-QString secondNumber;
+#include "CurrentValue.h"
 
 
-QString GenerateString()
+QString Value::GenerateString()
 {
     QString Operands[20] = {" = ", " + ", " - ", " * ", " / ", " ^ ", " mod "};
     if (firstNumber == "")
@@ -24,7 +20,7 @@ QString GenerateString()
     return Answer;
 }
 
-void setValueofCurrentNumber(QString change)
+void Value::setValueofCurrentNumber(QString change)
 {
     if (CurrentNumber == 1)
     {
@@ -66,7 +62,7 @@ void setValueofCurrentNumber(QString change)
     }
 }
 
-QString GetStringWithoutLastSymbol(QString SomeString)
+QString Value::GetStringWithoutLastSymbol(QString SomeString)
 {
     QString Answer;
     for (int i = 0; i < SomeString.length() - 1; i++)
@@ -76,7 +72,7 @@ QString GetStringWithoutLastSymbol(QString SomeString)
     return Answer;
 }
 
-void DeleteLastSymbol()
+void Value::DeleteLastSymbol()
 {
     // printf("Current Operand: %d, Current Number: %d, firstNuber: %s, secondNumber: %s\n", CurrentOperand, CurrentNumber, firstNumber.toStdString().c_str(), secondNumber.toStdString().c_str());
     if ((CurrentOperand == 0 && firstNumber.length() == 1) || (CurrentOperand == 0 && firstNumber.length() == 2 && firstNumber[0] == '-'))
@@ -101,4 +97,3 @@ void DeleteLastSymbol()
         secondNumber = GetStringWithoutLastSymbol(secondNumber);
     }
 }
-

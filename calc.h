@@ -3,7 +3,7 @@
 #ifndef CALC_H
 #define CALC_H
 
-#include <cmath>
+
 #include <QDialog>
 #include <QPushButton>
 #include <QEvent>
@@ -11,8 +11,10 @@
 #include <QMessageBox>
 #include <QClipboard>
 #include <QGuiApplication>
+#include <QString>
 
-
+#include "CurrentValue.h"
+#include "MathOperations.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class Calc; }
 QT_END_NAMESPACE
@@ -25,6 +27,7 @@ class Calc : public QDialog
 public:
     Calc(QWidget *parent = nullptr);
     ~Calc();
+    Value x;
 
 
 private slots:
@@ -140,7 +143,7 @@ private slots:
     void on_spinBox_valueChanged(int arg1);
     
     void keyPressEvent(QKeyEvent *event) override;
-
+    
     void on_decimalButton_clicked();
 
     void on_binaryButton_clicked();
@@ -148,7 +151,6 @@ private slots:
     void on_octalButto_clicked();
 
     void on_hexButton_clicked();
-
 private:
     Ui::Calc *ui;
 };
